@@ -11,8 +11,10 @@ const packageVersion = JSON.parse(fs.readFileSync(path.join(__dirname, '..', './
 async function main() {
     program.version(packageVersion)
         .description('A simple CLI to download google font with splits')
-        .option('-r, --root', 'set the root directory of the CSS file', '')
-        .option('-d, --dist', 'set the directory where the CSS file will be downloaded', './font-result')
+        .option('-r, --root <path>', 'set the root directory of the CSS file', '')
+        .option('-d, --dist <savePath>', 'set the directory where the CSS file will be downloaded', './font-result')
+        .option('-n, --name <fileName>', 'name of the result file', '')
+        .option('-c, --concurrent <number>', 'set the number of concurrent download', '30')
         .argument('<url>', 'Google font link to download')
         .action(downloadFont)
 

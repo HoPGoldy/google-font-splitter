@@ -13,14 +13,22 @@
     "build": "tsc && tsc-alias"
   },
   "devDependencies": {
+    "@types/cli-progress": "^3.11.0",
+    "@types/css-tree": "^1.0.7",
+    "@types/fs-extra": "^9.0.13",
     "@types/node": "^18.0.3",
+    "@types/node-fetch": "^2.6.2",
     "ts-node-dev": "^2.0.0",
     "tsc-alias": "^1.6.11",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "chalk": "4",
-    "commander": "^9.3.0"
+    "cli-progress": "^3.11.2",
+    "commander": "^9.3.0",
+    "css-tree": "^2.1.0",
+    "fs-extra": "^10.1.0",
+    "node-fetch": "2",
+    "recast": "^0.21.1"
   }
 }
