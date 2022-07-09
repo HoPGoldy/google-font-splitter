@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": false,
+        "module": "CommonJS",
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": [ "src/*.ts"],
+}

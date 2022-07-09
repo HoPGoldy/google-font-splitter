@@ -1,0 +1,26 @@
+{
+  "name": "google-font-splitter",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:HoPGoldy/google-font-splitter.git",
+  "author": "hopgoldy <hpgless@outlook.com>",
+  "license": "MIT",
+  "bin": {
+    "google-font-splitter": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsnd -r tsconfig-paths/register --respawn ./src/index.ts",
+    "build": "tsc && tsc-alias"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.6.11",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "chalk": "4",
+    "commander": "^9.3.0"
+  }
+}
