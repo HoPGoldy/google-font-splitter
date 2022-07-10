@@ -9,8 +9,8 @@
     "google-font-splitter": "dist/index.js"
   },
   "scripts": {
-    "dev": "tsnd -r tsconfig-paths/register --respawn ./src/index.ts",
-    "build": "tsc && tsc-alias"
+    "dev": "tsnd --respawn ./src/index.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.0",
@@ -19,8 +19,6 @@
     "@types/node": "^18.0.3",
     "@types/node-fetch": "^2.6.2",
     "ts-node-dev": "^2.0.0",
-    "tsc-alias": "^1.6.11",
-    "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
@@ -28,7 +26,6 @@
     "commander": "^9.3.0",
     "css-tree": "^2.1.0",
     "fs-extra": "^10.1.0",
-    "node-fetch": "2",
-    "recast": "^0.21.1"
+    "node-fetch": "2"
   }
 }

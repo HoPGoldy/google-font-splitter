@@ -41,7 +41,7 @@ interface DownloadTask {
  * 【核心】解析并下载 google 字体
  */
 export const downloadFont = async (sourceEntryUrl: string, options: AppCommandOptions): Promise<void> => {
-    console.log('options', options)
+    // console.log('options', options)
     const entrySaveName = options.name || getEntrySaveName(sourceEntryUrl)
     const distDir = path.resolve(process.cwd(), options.dist, entrySaveName)
 
@@ -64,7 +64,8 @@ export const downloadFont = async (sourceEntryUrl: string, options: AppCommandOp
         const pathDetail = path.parse(pathname);
 
         // 把网络路径转换成本地路径
-        const targetPath = fontSrc.pathname.replace(pathDetail.root, options.root);
+        let targetPath = fontSrc.pathname.replace(pathDetail.root, options.root);
+        if (targetPath.startsWith('/')) targetPath = targetPath.slice(1);
         node.value = targetPath as unknown as StringNode;
 
         return {
