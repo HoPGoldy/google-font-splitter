@@ -70,7 +70,7 @@ noto-sans-sc
 
     工具只接受一个参数，即 google fonts 的在线字体链接，请确保该链接指向的是一个 css 文件。
 
-- 配置项 `-r, --root <path>`
+- **配置项 `-r, --root <path>`**
 
     字体入口 css 文件引入字体源文件的路径前缀，默认为同级相对路径（*所以默认时需要把入口 css 和字体源文件放在同级目录下*）。
     
@@ -80,17 +80,17 @@ noto-sans-sc
     google-font-splitter "https://fonts.googleapis.com/..." -r https://your-custom-cdn/public/fonts/
     ```
 
-- 配置项 `-d, --dist <savePath>`
+- **配置项 `-d, --dist <savePath>`**
 
     字体文件要下载到的位置，默认为 `./font-result`。
 
-- 配置项 `-n, --name <fileName>`
+- **配置项 `-n, --name <fileName>`**
 
     字体入口文件的名称，即下载目录中的文件夹名称和其中的入口 css 文件名。
     
     默认会从提供的 google fonts 链接中解析，当解析失败时会使用当前的毫秒时间戳。
 
-- 配置项 ` -c, --concurrent <number>`
+- **配置项 ` -c, --concurrent <number>`**
 
     下载分割的字体源文件时的并发数量，默认为 30。
 
