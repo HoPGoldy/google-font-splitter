@@ -1,6 +1,7 @@
 # google-font-splitter
 
 ![](https://img.shields.io/npm/v/google-font-splitter)
+![](https://img.shields.io/github/languages/code-size/hopgoldy/google-font-splitter)
 
 将 google-font 提供的在线字体文件下载至本地的工具。
 
