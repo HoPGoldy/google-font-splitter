@@ -1,5 +1,7 @@
 # google-font-splitter
 
+![](https://img.shields.io/npm/v/google-font-splitter)
+
 将 google-font 提供的在线字体文件下载至本地的工具。
 
 google-font 提供的在线字体使用了 `unicode-range` 进行了字体包分割，可以有效的提升字体的加载速度。
@@ -22,13 +24,13 @@ npm install -g google-font-splitter
 
 打开 [google fonts](https://fonts.google.com/)，搜索选择要下载的字体。
 
-在字体详情页向下滚动找到 Styles，并在点击要使用的字体右侧的 **Select this style**`** 按钮。
+在字体详情页向下滚动找到 Styles，并在点击要使用的字体右侧的 **Select this style** 按钮。
 
-![](/imgs/2022-07-10-14-26-43.png)
+[![jsa2Ox.png](https://s1.ax1x.com/2022/07/10/jsa2Ox.png)](https://imgtu.com/i/jsa2Ox)
 
-在右侧的 **Selected family** 面板下方找到找到在线字体链接并将其复制出来（只需要链接即可，**不需要** 复制整行 \<link /> 标签）：
+在右侧的 **Selected family** 面板下方找到找到在线字体链接并将其复制出来（只需要链接即可，**不需要** 复制整行 link 标签）：
 
-![](/imgs/2022-07-10-14-27-54.png)
+[![jsag61.png](https://s1.ax1x.com/2022/07/10/jsag61.png)](https://imgtu.com/i/jsag61)
 
 **第二步：下载字体文件**
 
@@ -57,7 +59,7 @@ noto-sans-sc
 └── noto-sans-sc.css
 ```
 
-包含一个存放分割好的字体文件的文件夹和一个与目录同名的 css 文件，这个 css 文件即为入口文件。只需要在你的项目中使用 \<link /> 标签引用进来即可。
+包含一个存放分割好的字体文件的文件夹和一个与目录同名的 css 文件，这个 css 文件即为入口文件。**只需要将该文件夹复制到你的项目中并使用 \<link /> 标签引用进来即可。**
 
 ## 命令行参数及配置项
 
@@ -97,7 +99,7 @@ noto-sans-sc
 
 下面是一些常见框架的引用方式（假定下载好的字体文件存放在 noto-sans-sc 文件夹中，且入口文件为 `noto-sans-sc/noto-sans-sc.css`）：
 
-### vue2（vue-cli）
+**vue2（vue-cli）**
 
 将下载好的字体文件夹复制进 vue2 项目的 `/public` 中。
 
@@ -115,7 +117,7 @@ noto-sans-sc
 }
 ```
 
-### vue3（vite）
+**vue3（vite）**
 
 将下载好的字体文件夹复制进 vite 项目的 `/public` 中。
 
@@ -128,7 +130,7 @@ noto-sans-sc
 
 最后在需要的地方设置字体 font-family 即可。
 
-### react（create-react-app）
+**react（create-react-app）**
 
 首先将下载好的字体文件夹复制进 react 项目的 `/public` 中。
 
@@ -146,8 +148,8 @@ noto-sans-sc
 
 ## 参考
 
-- [google fonts](https://fonts.google.com/)
-- [fs-extra](https://github.com/jprichardson/node-fs-extra)
-- [chalk](note.youdao.com/web/#/file/B32A092E6C2E45DDB3CED7097A92057C/markdown/9E130E1FE7374FAC8579C1CC0B85B96E/)
-- [node-fetch](https://www.npmjs.com/package/node-fetch)
-- [css-tree](https://github.com/csstree/csstree)
+本工具使用如下依赖开发:
+[fs-extra](https://github.com/jprichardson/node-fs-extra)
+[chalk](note.youdao.com/web/#/file/B32A092E6C2E45DDB3CED7097A92057C/markdown/9E130E1FE7374FAC8579C1CC0B85B96E/)
+[node-fetch](https://www.npmjs.com/package/node-fetch)
+[css-tree](https://github.com/csstree/csstree)。
